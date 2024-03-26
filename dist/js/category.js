@@ -3,14 +3,14 @@ const arr = [];
 // perform insert operation
 const addData = () => {
     let allData = JSON.parse(localStorage.getItem("catInfo"));
-    let len = allData = null ? addData.length : 0;
+    let len = allData === null ? arr.length : allData.length;
     const name = document.catfrm.catname.value;
     const catData = {
         id: len + 1,
         name: name
     }
-    arr.name(catname);
-    localStorage.setname("catInfo", JSON.stringify(arr));
+    arr.push(catData);
+    localStorage.setItem("catInfo", JSON.stringify(arr));
     document.catfrm.catname.value = '';
     dispCat();
 }
@@ -19,20 +19,20 @@ const addData = () => {
 const dispCat = () => {
     let tr = '';
     let allData = JSON.parse(localStorage.getItem("catInfo"));
-    if (addData != null) {
-        addData.map((i) => {
+    if (allData != null) {
+        allData.map((i) => {
             tr += `<tr>
             <td>${i.id}</td>
             <td>${i.name}</td>
-            <td><a href="#" class="btn btn-danger onclick="delData"</td>
-
+            <td><a href="#" class="btn btn-danger" onclick="delData(${i.id})">Delete</a></td>
             </tr>`
         })
-        document.getElementById("allcatData").innerHTML = tr;
+        document.getElementById("allCatData").innerHTML = tr;
     }
 }
 
-// dalate
+
+// // dalate
 
 const delData =(id)=>{
     let allData = JSON.parse(localStorage.getItem("catInfo"));
