@@ -171,21 +171,20 @@
                                 <div class="card-header">
                                     <h3 class="card-title">Category</h3>
                                 </div>
-                                <!-- /.card-header -->
+               
                                 <!-- form start -->
-                                <form name="catfrm">
+                                <form name="catfrm" action="#" method="post">
                                     <input type="hidden" name="catid">
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Category</label>
-                                            <input type="text" name="kname" class="form-control" id="kname"
-                                                placeholder="Category Name:">
+                                            <label for="exampleInputEmail1">Category Name:</label>
+                                            <input type="text" name="catname" class="form-control" id="name" placeholder="Category Name:">
                                         </div>
                                     </div>
                                     <!-- /.card-body -->
                                     <div class="card-footer">
                                         <button type="button" class="btn btn-primary"
-                                            onclick="return addcat()">Submit</button>
+                                            onclick="addData()">Submit</button>
                                     </div>
                                 </form>
                             </div>
@@ -205,19 +204,12 @@
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="allCatData"></tbody>
+                                        <tbody id="allCatData">
+                                        </tbody>
                                     </table>
                                 </div>
                                 <!-- /.card-body -->
-                                <div class="card-footer clearfix">
-                                    <ul class="pagination pagination-sm m-0 float-right">
-                                        <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                                    </ul>
-                                </div>
+                              
                             </div>
                         </div>
                     </div>
